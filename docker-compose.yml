@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+
+  sample:
+    container_name: sample
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 3001:3000
+    #reate-react-app uses chokidar to watch file changes,
+    #and it has a flag CHOKIDAR_USEPOLLING to use polling to watch
+    # for file changes instead.
+    environment:
+      - CHOKIDAR_USEPOLLING=true
