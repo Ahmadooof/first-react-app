@@ -1,4 +1,4 @@
-# Hello World React App
+# Hello World React App + Docker
 this repo contains a dockerizing react hello world application + Nodemon which monitor the changes of Node app, and automatically restarts the process in docker container.
 
 # Usage
